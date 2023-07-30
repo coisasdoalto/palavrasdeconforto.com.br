@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import { Kalam, Darker_Grotesque } from "next/font/google";
+import { Darker_Grotesque, Courgette } from "next/font/google";
 import dayjs from "dayjs";
 import { useState } from "react";
 
-const kalam = Kalam({ subsets: ["latin"], weight: "400" });
+const verseFont = Courgette({ subsets: ["latin"], weight: "400" });
 
-const darkerGrotesque = Darker_Grotesque({ subsets: ["latin"] });
+const referenceFont = Darker_Grotesque({ subsets: ["latin"] });
 
 const verses = [
   {
@@ -110,9 +109,11 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
-      <div className="text-center">
-        <p className={`${kalam.className} text-3xl/snug md:text-5xl/snug mb-9`}>
+    <main className="flex min-h-screen flex-col items-center justify-center p-10">
+      <div className="text-center container">
+        <p
+          className={`${verseFont.className} text-3xl/snug md:text-5xl/snug mb-9`}
+        >
           &ldquo;
           {true
             ? verses[currentIndex].text
@@ -128,7 +129,7 @@ export default function Home() {
         </p>
 
         <small
-          className={`${darkerGrotesque.className} text-3xl/snug md:text-5xl`}
+          className={`${referenceFont.className} text-3xl/snug md:text-5xl`}
         >
           {verses[currentIndex].ref}
         </small>
