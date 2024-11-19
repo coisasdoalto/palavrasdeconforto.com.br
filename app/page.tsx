@@ -37,6 +37,10 @@ const verses = [
     text: "Os justos clamam, e o Senhor os ouve, e os livra de todas as suas angústias. Perto está o Senhor dos que têm o coração quebrantado, e salva os contritos de espírito.",
     ref: "Salmos 34:17-18",
   },
+  {
+    text: "mas, como está escrito: Nem olhos viram, nem ouvidos ouviram, nem jamais penetrou em coração humano o que Deus tem preparado para aqueles que o amam.",
+    ref: "1Coríntios 2:9 ARA"
+  }
 ];
 
 function NavigationButton({
